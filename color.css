@@ -1,0 +1,21 @@
+article .inner h1:hover{
+	color: #FBD74B; /* Yellow */
+}
+article nav a,
+article p a {
+	color: #79CEB7; /* Blue */
+}
+.dropzone .dz-remove {
+	color: #EC693E; /* Red */
+}
+article button.publish,
+article.current button.published:hover {
+	background: #FBD74B; /* Yellow */
+}
+article.current button.publish:hover,
+article button.published {
+	background: #79CEB7; /* Blue */
+}
+article button.delete {
+	background: #EC693E; /* Red */
+}

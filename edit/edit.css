@@ -1,0 +1,204 @@
+* {
+	outline: none;
+}
+article.current .inner h1 {
+	cursor: text !important;
+}
+article .inner h1:hover {
+	color: inherit;
+}
+article .inner h1::after {
+	content: none;
+}
+article .inner {
+	padding-bottom: 30px;
+}
+article button.publish,
+article button.published,
+article button.delete {
+	border: none;
+	box-shadow: inset 1px 0 0 0 #C7C7C7, inset -1px 0 0 0 #C7C7C7;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 1.1em;
+	cursor: pointer;
+	color: #fff;
+	width: 100%;
+}
+article button.publish,
+article button.published {
+	height: 40px;
+	transition: 0.15s background ease-in-out;
+	-o-transition: 0.15s background ease-in-out;
+	-moz-transition: 0.15s background ease-in-out;
+	-webkit-transition: 0.15s background ease-in-out;
+}
+article.adjacent button.publish,
+article.adjacent button.published {
+	box-shadow: none;
+}
+article button.publish::before,
+article button.published::before,
+article button.delete::before {
+	content: "";
+	width: 14px;
+	height: 15px;
+	display: inline-block;
+	margin-right: 4px;
+	position: relative;
+	top: 2px;
+}
+article button.delete::before {
+	margin-right: 6px;
+	top: 3px;
+}
+article button.publish::before,
+article.current button.published:hover::before {
+	background: url('../assets/draft.png') no-repeat;	
+}
+article button.published::before,
+article.current button.publish:hover::before {
+	background: url('../assets/publish.png') no-repeat;	
+}
+article button.publish::after {
+	content: "Draft";
+}
+article button.published::after {
+	content: "Published";
+}
+article.current button.publish:hover::after {
+	content: "Publish?";
+}
+article.current button.published:hover::after {
+	content: "Edit?";
+}
+.dropzone {
+	display: block;
+	position: relative;
+	background: none;
+	text-align: center;
+	width: 100%;
+	min-height: 100px;
+	height: auto;
+	border: none !important;
+	border-bottom: 2px dashed #C7C7C7 !important;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 1.1em;
+	cursor: pointer;
+	margin: 0 auto;
+	padding: 10px;
+}
+.dropzone .dz-message {
+	height: 34px;
+	width: 110px;
+	margin: 0;
+	margin-top: -25px;
+	margin-left: -55px;
+	padding-top: 34px;
+	font-size: 1.1em;
+	color: #000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: url('../assets/upload.png') no-repeat center center;
+	opacity: 0.3;
+	transition: 0.15s opacity ease-in-out;
+	-o-transition: 0.15s opacity ease-in-out;
+	-moz-transition: 0.15s opacity ease-in-out;
+	-webkit-transition: 0.15s opacity ease-in-out;
+}
+.dropzone:hover .dz-message {
+	opacity: 0.5;
+}
+.dropzone .dz-details {
+	display: none;
+}
+.dropzone .dz-preview {
+	position: relative;
+	top: 0;
+	transition: 0.15s top ease-in-out;
+	-o-transition: 0.15s top ease-in-out;
+	-moz-transition: 0.15s top ease-in-out;
+	-webkit-transition: 0.15s top ease-in-out;
+}
+.dropzone .dz-preview:hover {
+	top: 5px;
+}
+.dropzone .dz-preview:hover .dz-image img {
+	transform: none !important;
+	filter: none;
+	-webkit-filter: none;
+	cursor: no-drop;
+}
+.dropzone .dz-preview .dz-image {
+	border-radius: 15px;
+}
+.dropzone .dz-preview.dz-error .dz-error-message {
+	display: none;
+}
+article button.delete {
+	position: absolute;
+	left: 0;
+	bottom: -40px;
+	height: 40px;
+	transition: 0.15s bottom ease-in-out;
+	-o-transition: 0.15s bottom ease-in-out;
+	-moz-transition: 0.15s bottom ease-in-out;
+	-webkit-transition: 0.15s bottom ease-in-out;
+}
+article button.delete::before {
+	background: url('../assets/delete.png') no-repeat;
+}
+article button.delete::after {
+	content: "Delete Post";
+}
+article.current button.delete {
+	bottom: -30px;
+}
+article.current button.delete:hover {
+	bottom: 0;
+}
+html.touch article button.delete {
+	height: 60px;
+}
+html.touch article.current button.delete {
+	bottom: -10px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), 
+	   (min-resolution: 192dpi) {
+	article.current button.publish:hover::before,
+	article button.published::before {
+		background: url('../assets/publish@2x.png') no-repeat;
+		background-size: 14px 15px;
+	}
+	article button.publish::before,
+	article.current button.published:hover::before {
+		background: url('../assets/draft@2x.png') no-repeat;	
+		background-size: 12px 15px;	
+	}
+	article button.delete::before {
+		background: url('../assets/delete@2x.png') no-repeat;
+		background-size: 14px 14px;
+	}
+	.dropzone .dz-message {
+		background: url('../assets/upload@2x.png') no-repeat center center;	
+		background-size: 40px 34px;	
+	}
+}
+@media (min-width: 760px) {
+	#article-wrapper {
+		overflow-x: hidden;
+	}
+	#article-container article,
+	#article-container::after,
+	#article-container::before {
+		width: 760px; /* Media Query Variable */
+	}
+	#article-container article.current,
+	#article-container article.adjacent,
+	#article-container.edge-left::before,
+	#article-container.edge-right::after {
+		max-width: 760px; /* Media Query Variable */
+	}
+}

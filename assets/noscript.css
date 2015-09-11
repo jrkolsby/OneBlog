@@ -1,0 +1,24 @@
+#article-wrapper {
+
+}
+#article-container {
+	position: relative;
+	left: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+#article-container article {
+	display: block;
+	height: auto;
+	max-width: none;
+	vertical-align: none;
+	overflow: auto;
+}
+#article-container .img-wrapper {
+	margin: 0 auto;
+	position: relative;
+	display: block;
+	overflow: auto;
+}

@@ -1,0 +1,15 @@
+{
+	id: "1",
+	title: "Griffin Baumberger Is Running For President",
+	images: [
+		{
+			name: "1_large.png",
+			size: 1234
+		},
+		{
+			name: "2_large.png",
+			size: 12345
+		}
+	],
+	body: "<h1>Griffin Baumberger Is Running for President</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac feugiat quam. Maecenas a ullamcorper tortor. Cras tempus enim libero. Maecenas molestie ultricies magna, eget lobortis leo ultricies ac. Nunc lorem nibh, luctus quis viverra vitae, finibus nec arcu. Aliquam tempor molestie metus sed sodales. Aenean ultrices urna et dictum pharetra. Ut at dolor fermentum, ultrices ante a, ia</p><p>culis ex. Etiam fermentum ante leo. Phasellus aliquam ac neque nec scelerisque. Suspendisse scelerisque eu ligula ut lobortis. Integer egestas ligula eu eleifend convallis. Vivamus tellus diam, fermentum nec dictum et, pe</p><p>llentesque eu justo. Maecenas viverra magna in odio dictum rhoncus. Integer id posuere nulla.</p><h2>It wasn't the chicken that came before the egg, it was me</h2><p>Duis at dui arcu. Vestibulum neque nibh, maximus a commodo non, convallis a tellus. Donec viverra quam venenatis libero sodales, non gravida arcu molestie.</p><br></div>"
+}
